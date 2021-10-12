@@ -38,38 +38,36 @@ const double _kEdgeDragWidth = 20.0;
 const Duration _kBaseSettleDuration = Duration(milliseconds: 246);
 
 class InnerDrawer extends StatefulWidget {
-  const InnerDrawer(
-      {GlobalKey? key,
-      this.leftChild,
-      this.rightChild,
-      required this.scaffold,
-      this.offset = const IDOffset.horizontal(0.4),
-      this.scale = const IDOffset.horizontal(1),
-      this.proportionalChildArea = true,
-      this.borderRadius = 0,
-      this.onTapClose = false,
-      this.tapScaffoldEnabled = false,
-      this.swipe = true,
-      this.swipeChild = false,
-      this.duration,
-      this.velocity = 1,
-      this.boxShadow,
-      this.colorTransitionChild,
-      this.colorTransitionScaffold,
-      this.leftAnimationType = InnerDrawerAnimation.static,
-      this.rightAnimationType = InnerDrawerAnimation.static,
-      this.backgroundDecoration,
-      this.innerDrawerCallback,
-      this.onDragUpdate})
-      : assert(leftChild != null || rightChild != null),
-        assert(scaffold != null),
-        super(key: key);
+  const InnerDrawer({
+    GlobalKey? key,
+    required this.leftChild,
+    required this.rightChild,
+    required this.scaffold,
+    this.offset = const IDOffset.horizontal(0.4),
+    this.scale = const IDOffset.horizontal(1),
+    this.proportionalChildArea = true,
+    this.borderRadius = 0,
+    this.onTapClose = false,
+    this.tapScaffoldEnabled = false,
+    this.swipe = true,
+    this.swipeChild = false,
+    this.duration,
+    this.velocity = 1,
+    this.boxShadow,
+    this.colorTransitionChild,
+    this.colorTransitionScaffold,
+    this.leftAnimationType = InnerDrawerAnimation.static,
+    this.rightAnimationType = InnerDrawerAnimation.static,
+    this.backgroundDecoration,
+    this.innerDrawerCallback,
+    this.onDragUpdate
+  }) : super(key: key);
 
   /// Left child
-  final Widget? leftChild;
+  final Widget leftChild;
 
   /// Right child
-  final Widget? rightChild;
+  final Widget rightChild;
 
   /// A Scaffold is generally used but you are free to use other widgets
   final Widget scaffold;
